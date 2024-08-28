@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NewToDoList.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+        Spacing="25"
+        Padding="30,0"
+        VerticalOptions="Center">
+
+            <Label
+            Text="Welcome"
+            SemanticProperties.HeadingLevel="Level2"
+            FontFamily="LeagueSpartanMedium"
+            FontSize="70"
+            HorizontalOptions="Center" />
+
+            <Button
+            Text="See tasks"
+            Clicked="OnTaskButtonClicked"
+            HorizontalOptions="Center" />
+
+            <Label
+            Text="Welcome to the ToDo List Application. We hope you'll enjoy using our app."
+            FontFamily="GillSansMT"
+            FontSize="20"
+            HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

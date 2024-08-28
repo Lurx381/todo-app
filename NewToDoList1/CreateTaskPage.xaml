@@ -1,0 +1,37 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="NewToDoList.CreateTaskPage"
+             Title="Create Task">
+    <ScrollView>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="Title" />
+            <Entry x:Name="taskTitleEntry" Placeholder="Enter task title (max 50 characters)" />
+            <Label x:Name="titleErrorLabel" Text="" TextColor="Red" />
+
+            <Label Text="Description" />
+            <Editor x:Name="taskDescriptionEditor" Placeholder="Enter task description (max 300 characters)" />
+            <Label x:Name="descriptionErrorLabel" Text="" TextColor="Red" />
+
+            <Label Text="Scheduled Date and Time" />
+            <DatePicker x:Name="scheduledDatePicker" MinimumDate="{x:Static sys:DateTime.Today}" />
+            <TimePicker x:Name="scheduledTimePicker" />
+            <Label x:Name="scheduledDateTimeErrorLabel" Text="" TextColor="Red" />
+
+            <Label Text="Reminder Date and Time" />
+            <DatePicker x:Name="reminderDatePicker" MinimumDate="{x:Static sys:DateTime.Today}" />
+            <TimePicker x:Name="reminderTimePicker" />
+            <Label x:Name="reminderDateTimeErrorLabel" Text="" TextColor="Red" />
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Is the task important?" />
+                <RadioButton x:Name="radioYes" Content="Yes" />
+                <RadioButton x:Name="radioNo" Content="No" />
+            </StackLayout>
+            <Label x:Name="importanceErrorLabel" Text="" TextColor="Red" />
+
+            <Button Text="Create Task" Clicked="OnCreateTaskClicked"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

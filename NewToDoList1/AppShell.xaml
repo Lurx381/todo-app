@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="NewToDoList.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:NewToDoList"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="True">
+    <Shell.TitleView>
+        <HorizontalStackLayout Spacing="15" BackgroundColor="#75FFD2">
+            <Image
+                Source="todolist.png"
+                HeightRequest="40"
+                Aspect="AspectFit"
+                />
+            <Button Text="Home" Clicked="OnHomeButtonClicked" HeightRequest="30" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="#474747" FontFamily="LeagueSpartanMedium" FontSize="25"></Button>
+            <Button Text="Tasks" Clicked="OnTaskButtonClicked" HeightRequest="30" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="#474747" FontFamily="LeagueSpartanMedium" FontSize="25"></Button>
+            <Button Text="Create" Clicked="OnCreateTaskButtonClicked" HeightRequest="30" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="#474747" FontFamily="LeagueSpartanMedium" FontSize="25"></Button>
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+
+    <ShellItem Shell.TabBarIsVisible="False">
+        <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}"/>
+        <ShellContent Route="TaskPage" ContentTemplate="{DataTemplate local:TaskPage}" />
+        <ShellContent Route="CreateTaskPage" ContentTemplate="{DataTemplate local:CreateTaskPage}" />
+    </ShellItem>
+</Shell>
