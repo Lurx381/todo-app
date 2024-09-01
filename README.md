@@ -1,4 +1,4 @@
-# todo-app
+# To-Do App
 The greatest ToDo App out there
 
 # Info
